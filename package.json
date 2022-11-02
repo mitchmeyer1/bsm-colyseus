@@ -1,6 +1,6 @@
 {
-  "name": "@colyseus/monorepo",
-  "private": true,
+  "name": "@bsmcolyseus/monorepo",
+  "private": false,
   "type": "module",
   "workspaces": [
     "bundles/*",
