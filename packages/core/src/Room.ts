@@ -644,7 +644,7 @@ export abstract class Room<State= any, Metadata= any> {
     if (success && this.onLeave) {
       try {
         client.state = ClientState.LEAVING;
-        await this.onLeave(client, (code === Protocol.WS_CLOSE_CONSENTED));
+        await this.onLeave(client, (code === Protocol.WS_CLOSE_CONSENTED), code);
 
       } catch (e) {
         debugAndPrintError(`onLeave error: ${(e && e.message || e || 'promise rejected')}`);
